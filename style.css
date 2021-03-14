@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{
+    --primary-color:#4DB6AC;
+    --secondary-color: #B2EBF2;
+    --text-color:#F5F5F5;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    transform: translateX(0px);
+    font-family: 'Open Sans', sans-serif;
+    color:#212121;
+    background-color: var(--text-color);
+    margin: 0px;
+    transition: transform 0.4s linear;
+}
+
+
+body.shownav{
+    transform: translateX(180px);
+}
+
+/* NAV */
+.nav-container{
+    transform: translateX(-180px);
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 100;
+    width:180px;
+    height:100%;
+    margin: 0px;
+    background-color: var(--primary-color);
+}
+
+.nav-menu{
+    padding:0px;
+}
+
+.nav-menu li{
+    text-align: center;
+    padding: 15px 0px;
+    border-bottom:1px solid  var(--secondary-color);
+}
+
+
+.nav-menu li:first-of-type{
+    border-top:1px solid  var(--secondary-color);
+}
+
+.nav-menu-socialmedia {
+    text-align: center;
+    padding: 50px 0px;
+    font-size: 25px;
+}
+
+.nav-menu-socialmedia a{
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+nav .user{
+    display: block;
+    font-size: 50px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav li a{
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 0px 10px;
+}
+
+nav li a:hover{
+    color:#212121;
+}
+
+/* MAIN COMPONENT */
+
+.container{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+.landing-page{
+    position: relative;
+    text-align: center;
+    width:100vw;
+    margin:0px 30px;
+    padding: 15px;
+    background-color: var(--secondary-color);
+}
+
+
+.burger, .exit{
+    background-color:#4db6ac6b;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px 25px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.burger{
+    display: none;
+}
+
+.burger.show{
+    display: block;
+}
+
+.exit{
+    display: none;
+}
+
+.exit.show{
+    display: block;
+}
+
+.signup{
+    background-color:#4db6ac6b;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-weight: bolder;
+
+}
+
+
+.content-container{
+    width:600px;
+    margin:15px 30px;
+    padding: 15px;
+    background-color: rgb(238, 238, 238);  
+}
+
+/* MODAL */
+
+.modal-container{
+    z-index: 100;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:rgba(27, 27, 27, 0.678);
+    animation: opacityModal 0.4s linear;
+
+}
+
+
+.modal{
+ 
+    background-color:var(--primary-color);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.384), 0 6px 20px 0 rgba(0, 0, 0, 0.24);
+    width: 400px;
+    height: auto;   
+    padding:15px 0px;
+    padding-top: 0px;
+}
+
+.show{
+    display:flex;
+}
+
+@keyframes opacityModal{
+    0% { opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    font-size: 18px;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.068), 0 6px 20px 0 rgba(0, 0, 0, 0.048);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    padding: 20px 30px;
+ 
+}
+
+header div{
+    text-align: right;
+}
+
+header.close{
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.close{
+    cursor: pointer;
+    color: #202020be;
+    font-size:25px;
+}
+
+.form-header{
+    text-align: center;
+    padding: 0px 0px 20px 0px;
+    font-size: 14px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 30px;
+}
+
+
+form input,form label {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+form button{
+    background-color: var(--secondary-color);
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-top: 40px;
+    padding: 10px 15px;
+    font-weight: bolder;
+}
+
